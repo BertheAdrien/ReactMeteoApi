@@ -2,7 +2,7 @@
   "name": "meteo",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://kevinniel.github.io/2425-MDS-BTSSIO2-REACT-METEO",
+  "homepage": "https://github.com/BertheAdrien/ReactMeteoApi",
   "dependencies": {
     "cra-template": "1.2.0",
     "react": "^19.0.0",
