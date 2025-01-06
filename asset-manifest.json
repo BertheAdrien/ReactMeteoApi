@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/BertheAdrien/ReactMeteoApi/static/css/main.6497b280.css",
+    "main.js": "/BertheAdrien/ReactMeteoApi/static/js/main.3a380a2e.js",
+    "static/js/488.7cfe8f51.chunk.js": "/BertheAdrien/ReactMeteoApi/static/js/488.7cfe8f51.chunk.js",
+    "index.html": "/BertheAdrien/ReactMeteoApi/index.html",
+    "main.6497b280.css.map": "/BertheAdrien/ReactMeteoApi/static/css/main.6497b280.css.map",
+    "main.3a380a2e.js.map": "/BertheAdrien/ReactMeteoApi/static/js/main.3a380a2e.js.map",
+    "488.7cfe8f51.chunk.js.map": "/BertheAdrien/ReactMeteoApi/static/js/488.7cfe8f51.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6497b280.css",
+    "static/js/main.3a380a2e.js"
+  ]
+}
