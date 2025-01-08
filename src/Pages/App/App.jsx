@@ -1,35 +1,37 @@
+import React, { useState } from 'react';
 import './App.css';
-import Heures from '../../Components/heures'
-import Semaine from '../../Components/semaine';
-import Compteur from '../../Components/compteur';
-
-import { useState } from 'react';
-
-
-const datas = {
-  temp: "252 °C",
-  pression: "1074 Hpa",
-  humidite: "20 %"
-};
+import Heures from '../../Components/heures.jsx';
+import Semaine from '../../Components/semaine.jsx';
+import CityForm from '../../Components/cityForm.jsx';
 
 function App() {
-  const [affichage, setAffichage]= useState(false);
+  const [affichage, setAffichage] = useState(false);
+  const [city, setCity] = useState("");
+  const [submitted, setSubmitted] = useState(false); 
+
+  const handleCitySubmit = (newCity) => {
+    setCity(newCity);
+    setSubmitted(true);
+  };
 
   const changeAffichage = () => {
-    setAffichage( (val) => !val )
-  }
+    setAffichage((val) => !val);
+  };
 
   return (
     <div className="App">
       <h1>MÉTÉO</h1>
-      <button onClick={changeAffichage}>Passer en affichage par {affichage ? "heures" : "semaine"}</button>
+      
+      <CityForm onCitySubmit={handleCitySubmit} />
 
-      { !affichage && <Heures datas={datas} />}
-      { affichage && <Semaine /> }
-      
-      <hr />
-      
-      <Compteur />
+      <button onClick={changeAffichage} className="toggle-button">
+        Passer en affichage par {affichage ? "heures" : "semaine"}
+      </button>
+
+      {!affichage ? 
+        <Heures city={city} submitted={submitted} /> : 
+        <Semaine city={city} submitted={submitted} />
+      }
     </div>
   );
 }
